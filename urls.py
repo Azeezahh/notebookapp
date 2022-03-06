@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from document.views import delete_document
+
 
 urlpatterns = [
+    
+    path('delete_document/<int:docid>/', delete_document, name='delete_document'),
     path('admin/', admin.site.urls),
 ]
